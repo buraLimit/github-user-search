@@ -1,0 +1,5 @@
+export const GET_SEARCHED_USER = "GET_SEARCHED_USER"
+export const GET_USER_REPO = "GET_USER_REPO"
+export const GET_USER_GISTS = "GET_USER_GISTS"
+export const GET_USER_STAR = "GET_USER_STAR"
+export const GET_SEARCH = "GET_SEARCH"
