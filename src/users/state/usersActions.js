@@ -1,13 +1,15 @@
 import * as types from "./actionTypes"
 import axios from "axios"
 
+const token = "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"
+
 export const getUser = (dispatch,userName) => {
     (async () => {
         try{
             const response = await axios.get(
                 `https://api.github.com/users/${userName}`, {
                     headers:{
-                        'Authorization': `token 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`
+                        'Authorization': `token ${token}`
                     }
                 }
             );
@@ -27,7 +29,7 @@ export const getUserRepo = (dispatch,userName) => {
             const response = await axios.get(
                 `https://api.github.com/users/${userName}/repos`, {
                     headers:{
-                        'Authorization': `token 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`
+                        'Authorization': `token ${token}`
                     }
                 }
             );
@@ -48,7 +50,7 @@ export const getUserGists = (dispatch,userName) => {
             const response = await axios.get(
                 `https://api.github.com/users/${userName}/gists`, {
                     headers:{
-                        'Authorization': `token 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`
+                        'Authorization': `token ${token}`
                     }
                 }
             );
@@ -69,7 +71,7 @@ export const getUserStar = (dispatch,userName) => {
             const response = await axios.get(
                 `https://api.github.com/users/${userName}/starred`, {
                     headers:{
-                        Authorization: `token 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`
+                        Authorization: `token ${token}`
                     }
                 }
             );
@@ -90,7 +92,7 @@ export const searchUsers = (dispatch,query) => {
           const response = await axios.get(
               `https://api.github.com/search/users?q=${query}`, {
                   headers:{
-                      Authorization: `token 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`
+                      Authorization: `token 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`
                   }
               }
           );
